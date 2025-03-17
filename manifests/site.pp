@@ -25,7 +25,7 @@ File { backup => false }
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
-Notify{ 'hello from server': }
+Notify{ 'hello from server2': }
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
