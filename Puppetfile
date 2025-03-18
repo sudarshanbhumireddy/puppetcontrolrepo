@@ -12,7 +12,6 @@ mod 'puppetlabs-java', '11.1.0'
 mod 'puppetlabs-registry', '5.0.3'
 mod 'puppetlabs-chocolatey'
 mod 'puppetlabs-powershell'
-mod 'puppetlabs-registry'
 mod 'puppetlabs-firewall'
 
 # Modules from Git
