@@ -14,7 +14,6 @@ mod 'puppetlabs-chocolatey'
 mod 'puppetlabs-powershell'
 mod 'puppetlabs-registry'
 mod 'puppetlabs-firewall'
-mod 'puppetlabs-stdlib'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
