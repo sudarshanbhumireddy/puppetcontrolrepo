@@ -26,6 +26,10 @@ File { backup => false }
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
 Notify{ 'hello from server2': }
+package { 'java':
+    ensure => installed
+    }
+    
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
