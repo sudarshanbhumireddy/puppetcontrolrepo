@@ -31,13 +31,7 @@ file { 'C:\test':
 }
 
 # Ensure that the 'C:\test\sample.txt' file exists with specified content 
-file { 'C:\test\sample.txt':
-  ensure  => file,
-  content => "This is a sample Puppet managed file on Windows.\n",
-}
-package { 'java':
-    ensure => installed
-    }
+  
     
   # This is where you can declare classes for all nodes.
   # Example:

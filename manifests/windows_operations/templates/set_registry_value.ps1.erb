@@ -1,0 +1,14 @@
+# set_registry_value.ps1.erb
+
+param (
+    [string]$RegistryPath,
+    [string]$ValueName,
+    [string]$ValueType,
+    [string]$ValueData
+)
+
+Write-Output "$RegistryPath $ValueName $ValueType $ValueData"
+
+# Set the registry value
+Set-ItemProperty -Path "HKCU:\\$RegistryPath" -Name $ValueName -Value $ValueData -Type $ValueType
+

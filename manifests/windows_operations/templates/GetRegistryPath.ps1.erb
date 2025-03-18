@@ -1,0 +1,60 @@
+# Function to search the registry for a specific term and return version details
+function Search-Registry {
+    param (
+        [string]$searchTerm
+    )
+    
+    # Define the registry paths to search
+    $paths = @(
+        "HKLM:\SOFTWARE\WOW6432Node"
+    )
+
+    # Output list to store results
+    $results = @()
+
+    # Iterate through each path and search for the term
+    foreach ($path in $paths) {
+        Write-Host "Searching in: $path"
+        try {
+            # Get all subkeys under the path
+            Get-ChildItem -Path $path -Recurse -ErrorAction SilentlyContinue | ForEach-Object {
+                $key = $_.PSPath
+                try {
+                    # Get properties of the current key
+                    $properties = Get-ItemProperty -Path $key -ErrorAction SilentlyContinue
+                    if ($properties.PSObject.Properties.Name -contains 'DisplayName' -and $properties.DisplayName -match $searchTerm) {
+                        # Retrieve version information
+                        $version = $null
+                        if ($properties.PSObject.Properties['DisplayVersion']) {
+                            $version = $properties.PSObject.Properties['DisplayVersion'].Value
+                        }
+                        if (-not $version -and $properties.PSObject.Properties['Version']) {
+                            $version = $properties.PSObject.Properties['Version'].Value
+                        }
+                        # Add result to output list
+                        $results += [PSCustomObject]@{
+                            Path        = $key
+                            DisplayName = $properties.DisplayName
+                            Version     = $version
+                        }
+                    }
+                } catch {
+                    Write-Host "Error accessing properties in: $key"
+                }
+            }
+        } catch {
+            Write-Host "Error accessing path: $path"
+        }
+    }
+
+    # Output the results
+    if ($results.Count -gt 0) {
+        $results | Format-Table -AutoSize
+    } else {
+        Write-Output "No results found for '$searchTerm'."
+    }
+}
+
+# Search the registry for WinSCP
+Search-Registry -searchTerm "WinSCP"
+
