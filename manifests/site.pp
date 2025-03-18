@@ -26,6 +26,15 @@ File { backup => false }
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
 Notify{ 'hello from server2': }
+file { 'C:\test':
+  ensure => directory,
+}
+
+# Ensure that the 'C:\test\sample.txt' file exists with specified content 
+file { 'C:\test\sample.txt':
+  ensure  => file,
+  content => "This is a sample Puppet managed file on Windows.\n",
+}
 package { 'java':
     ensure => installed
     }
