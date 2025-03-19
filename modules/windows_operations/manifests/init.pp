@@ -7,7 +7,7 @@ class windows_operations(
   class {'windows_operations::fileoperations': }
   
   
-  class { 'windows_operations::service':
+  class { 'windows_operations::service_test':
     service_name   => 'puppet',
     service_ensure => 'running',
   }

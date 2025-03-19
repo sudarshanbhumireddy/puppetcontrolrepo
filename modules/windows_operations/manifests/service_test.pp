@@ -1,4 +1,4 @@
-class windows_operations::service(
+class windows_operations::service_test(
   
   String $service_name,
   String $service_ensure,
