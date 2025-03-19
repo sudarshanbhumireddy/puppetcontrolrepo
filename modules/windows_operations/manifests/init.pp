@@ -13,6 +13,7 @@ class windows_operations(
 
   class {'windows_operations::fileoperations': }
   
+  class {'windows_operations::packages_install':}
   
   class { 'windows_operations::service_test':
     service_name   => 'puppet',
