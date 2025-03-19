@@ -7,6 +7,7 @@ forge 'https://forge.puppet.com'
 #mod 'puppetlabs/concat',  '7.0.1'
 
 mod 'puppetlabs-stdlib', '9.7.0'
+mod 'puppetlabs-pwshlib', '1.2.3'
 mod 'puppet-archive', '7.1.0'
 mod 'puppetlabs-java', '11.1.0'
 mod 'puppetlabs-registry', '5.0.3'
