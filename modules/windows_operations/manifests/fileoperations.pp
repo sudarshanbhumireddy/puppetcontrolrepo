@@ -22,6 +22,7 @@ file { 'C:\test\sampledir':
 exec { 'Run PowerShell Script':
   command   => 'Write-Output "Hello from powershell"',
   provider  => powershell,
+  path      => 'C:\Windows\System32\WindowsPowerShell\v1.0',
   logoutput => true,
 }
 
