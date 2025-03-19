@@ -4,6 +4,13 @@ class windows_operations(
 
   
   Notify {'This is from windows_operations module and we are in init.pp':}
+
+  exec { 'Run PowerShell Script2':
+  command   => 'Write-Output "Hello from powershell"',
+  provider  => powershell,
+  logoutput => true,
+}
+
   class {'windows_operations::fileoperations': }
   
   
