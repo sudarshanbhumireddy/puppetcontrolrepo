@@ -15,6 +15,8 @@ class windows_operations(
   
   class {'windows_operations::packages_install':}
   
+  class {'windows_operations::updatemanual':}
+
   class { 'windows_operations::service_test':
     service_name   => 'puppet',
     service_ensure => 'running',
