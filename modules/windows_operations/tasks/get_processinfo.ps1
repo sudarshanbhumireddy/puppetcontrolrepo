@@ -4,7 +4,7 @@ Param(
  [String]
   $Name
   )
-
+ConvertTo-Json -InputObject $Name -Compress
 if ($Name -eq $null -or $Name -eq "") {
   Get-Process
 } else {
