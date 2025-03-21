@@ -1,6 +1,6 @@
 {
     "description": "This task has a sensitive property denoted by its metadata",
-    "input_method": "stdin",
+    "input_method": "environment",
     "parameters": {
       "name": {
         "description": "process name",
