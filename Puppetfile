@@ -14,6 +14,7 @@ mod 'puppetlabs-registry', '5.0.3'
 mod 'puppetlabs-chocolatey'
 mod 'puppetlabs-powershell'
 mod 'puppetlabs-firewall'
+mod 'puppetlabs-iis', '10.1.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
