@@ -1,4 +1,4 @@
-plan windows_operations::install_and_restart(
+plan windows_operations::install_restart(
   TargetSpec $nodes,
   String $package_name = 'Notepad++',
   String $service_name = 'wuauserv'
