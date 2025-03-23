@@ -1,4 +1,4 @@
-plan windows_operations::install_restart(
+plan windows_operations::install_restart (
   TargetSpec $nodes,
   String $package_name = 'Notepad++',
   String $service_name = 'wuauserv'
@@ -6,14 +6,14 @@ plan windows_operations::install_restart(
   # Install package using Chocolatey
   run_task('package', $nodes, 
     name   => $package_name,
-    ensure => 'installed',
+    action => 'install',
     provider => 'chocolatey'
   )
 
   # Restart the specified service
   run_task('service', $nodes, 
     name   => $service_name,
-    ensure => 'restarted'
+    action => 'restart'
   )
 
   # Verify service status
