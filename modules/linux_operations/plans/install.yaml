@@ -1,0 +1,12 @@
+parameters:
+  targets:
+    type: TargetSpec
+
+steps:
+  - name: install_apache
+    task: package
+    targets: $targets
+    parameters:
+      action: install
+      name: apache2
+    description: "Install Apache using the packages task"

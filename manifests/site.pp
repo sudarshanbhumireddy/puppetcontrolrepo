@@ -26,10 +26,6 @@ File { backup => false }
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
 
-    class { 'python':
-      version => 'system',
-      dev     => true,
-    }
 # Ensure that the 'C:\test\sample.txt' file exists with specified content 
   
     
