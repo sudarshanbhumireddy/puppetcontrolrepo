@@ -15,6 +15,7 @@ mod 'puppetlabs-chocolatey'
 mod 'puppetlabs-powershell'
 mod 'puppetlabs-firewall'
 mod 'puppetlabs-iis', '10.1.0'
+mod 'puppetlabs-python_task_helper'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples

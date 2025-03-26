@@ -1,4 +1,4 @@
 {
-    "files": ["linux_operations/files/rb_helper.rb"]
-  }
-  
+    "files": ["python_task_helper/files/task_helper.py"],
+    "input_method": "stdin"
+}
