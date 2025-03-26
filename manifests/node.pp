@@ -1,4 +1,8 @@
 node 'desktop-4mtampd.localdomain' {
     include windows_operations
-    include windows_webserver
+    class { 'python':
+      version => 'system',
+      dev     => true,
+    }
+
 }
