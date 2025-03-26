@@ -4,11 +4,11 @@ plan windows_operations::install_restart (
   String $service_name = 'wuauserv'
 ) {
   # Install package using Chocolatey
-  run_task('package', $nodes, 
-    name   => $package_name,
-    action => 'install',
-    provider => 'chocolatey'
-  )
+  #run_task('package', $nodes, 
+  #  name   => $package_name,
+  #  action => 'install',
+  #  provider => 'chocolatey'
+  #)
 
   # Restart the specified service
   run_task('service', $nodes, 
