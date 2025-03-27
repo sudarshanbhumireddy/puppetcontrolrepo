@@ -7,7 +7,7 @@ if [[ ! -f "$FILE_PATH" ]]; then
   echo "Error: File $FILE_PATH not found."
   exit 1
 fi
-
+echo "Updating $FILE_PATH"
 # Loop through the key-value pairs
 while [[ "$#" -gt 0 ]]; do
   KEY="$1"
