@@ -1,0 +1,1 @@
+Write-Host 'Hello from MyScript.ps1'
