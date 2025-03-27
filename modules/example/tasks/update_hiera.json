@@ -1,0 +1,10 @@
+{
+    "description": "Updates multiple keys in common.yaml",
+    "parameters": {
+      "params": {
+        "type": "Array",
+        "description": "An array of key-value pairs to update"
+      }
+    }
+  }
+  
