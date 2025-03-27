@@ -1,0 +1,17 @@
+{
+    "description": "Update Hiera configuration values",
+    "parameters": {
+      "key": {
+        "type": "String",
+        "description": "The Hiera key to update"
+      },
+      "value": {
+        "type": "String",
+        "description": "The new value to set"
+      }
+    },
+    "implementations": [
+      {"name": "update_hiera.ps1", "requirements": ["powershell"]}
+    ]
+  }
+  

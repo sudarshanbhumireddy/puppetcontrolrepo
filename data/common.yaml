@@ -1,0 +1,4 @@
+apache:
+  version: "2.4"
+  document_root: "C:\\Apache24\\htdocs"
+  server_admin: "admin@example.com"
