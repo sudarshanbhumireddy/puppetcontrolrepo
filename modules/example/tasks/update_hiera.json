@@ -1,10 +1,4 @@
 {
-    "description": "Updates multiple keys in common.yaml",
-    "parameters": {
-      "params": {
-        "type": "Array",
-        "description": "An array of key-value pairs to update"
-      }
-    }
-  }
-  
+  "description": "This task has a sensitive property denoted by its metadata",
+  "input_method": "environment"
+}
